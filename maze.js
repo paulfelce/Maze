@@ -28,6 +28,11 @@ function move(direction) {
   }
   set_square(row, col, '<img style="width:34px"  src="https://paulfelce.github.io/pairs/pirate.png"></img>');
   hide_buttons();
+  if(col==9&&row==9)
+  {
+   $('#maze').hide();
+   $('#win').show(); 
+  }
 }
 
 //function to put text in a grid ref
