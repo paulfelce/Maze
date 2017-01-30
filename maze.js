@@ -39,6 +39,14 @@ function colour_square(tr,tc){
   $('#maze tr:eq(' + tr + ') td:eq(' + tc + ')').css('background','blue')
   
 }
+//fill centre of the buttons in blue
+//so we have something to compare
+function colour_button_square(){
+  $('#buttons tr:eq(1) td:eq(1)').css('background','blue')
+  
+}
+
+
 //show only buttons that make legal moves
 function hide_buttons(){
   
@@ -47,17 +55,17 @@ function hide_buttons(){
   $('#left').hide();
   $('#right').hide();
   
-  if($('#maze tr:eq(' + row + ') td:eq(' + (col+1) + ')').css('background')!=$('#maze tr:eq(0) td:eq(0)').css('background'))
+  if($('#maze tr:eq(' + row + ') td:eq(' + (col+1) + ')').css('background')!=$('#buttons tr:eq(1) td:eq(1)').css('background')&&col<9)
     $('#right').show()
   
   //compare with a known blue square
-  if($('#maze tr:eq(' + row + ') td:eq(' + (col-1) + ')').css('background')!=$('#maze tr:eq(0) td:eq(0)').css('background'))
+  if($('#maze tr:eq(' + row + ') td:eq(' + (col-1) + ')').css('background')!=$('#buttons tr:eq(1) td:eq(1)').css('background')&&col>0)
     $('#left').show()
   
-  if($('#maze tr:eq(' + (row-1) + ') td:eq(' + col + ')').css('background')!=$('#maze tr:eq(0) td:eq(0)').css('background'))
+  if($('#maze tr:eq(' + (row-1) + ') td:eq(' + col + ')').css('background')!=$('#buttons tr:eq(1) td:eq(1)').css('background')&&row>0)
     $('#up').show()
   
-    if($('#maze tr:eq(' + (row+1) + ') td:eq(' + col + ')').css('background')!=$('#maze tr:eq(0) td:eq(0)').css('background'))
+    if($('#maze tr:eq(' + (row+1) + ') td:eq(' + col + ')').css('background')!=$('#buttons tr:eq(1) td:eq(1)').css('background')&&row<9)
     $('#down').show()
   
   
@@ -66,13 +74,6 @@ function hide_buttons(){
 
 //fill in squares to make the maze
 function fill_squares(){
-  for(i=0;i<10;i++)
-    {
-      colour_square(i,0)
-      colour_square(i,9)
-      colour_square(0,i)
-      colour_square(0,9)
-    }
   
       colour_square(2,1)
       colour_square(2,2)
@@ -87,6 +88,9 @@ function fill_squares(){
       colour_square(4,4)
       colour_square(4,3)
       colour_square(4,2)
+  
+      //css colour to compare
+      colour_button_square()
       //set target squaer
         $('#maze tr:eq(5) td:eq(5)').css('background','red')
       
