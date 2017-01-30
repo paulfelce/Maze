@@ -32,7 +32,7 @@ function move(direction) {
   {
    $('#maze').hide();
     $('#buttons').hide();
-   $('#info').text("hooray, you got to the ship. Now find your next clue in a castle"); 
+   $('#info').text("Hooray, you got to the ship. Now find your next clue in a castle"); 
   }
 }
 
