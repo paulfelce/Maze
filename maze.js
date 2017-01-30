@@ -31,7 +31,8 @@ function move(direction) {
   if(col==9&&row==9)
   {
    $('#maze').hide();
-   $('#win').show(); 
+    $('#buttons').hide();
+   $('#info').text("hooray, you got to the ship. Now find your next clue in a castle"); 
   }
 }
 
