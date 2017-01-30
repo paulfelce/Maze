@@ -113,7 +113,7 @@ colour_square(9,4)
 
   //css colour to compare
       colour_button_square()
-   
+    $('#buttons tr:eq(1) td:eq(1)').css('background','blue')
       
     
       
