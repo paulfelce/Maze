@@ -5,6 +5,7 @@ $(function() {
   
   fill_squares()
   set_square(row, col, '<img style="width:34px"  src="https://paulfelce.github.io/pairs/pirate.png"></img>');
+  set_square(9, 9, '<img style="width:34px"  src="pirate_ship.jpg"></img>');
   hide_buttons();
 })
 
@@ -112,8 +113,7 @@ colour_square(9,4)
 
   //css colour to compare
       colour_button_square()
-      //set target squaer
-        $('#maze tr:eq(9) td:eq(9)').css('background','red')
+   
       
     
       
