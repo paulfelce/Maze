@@ -1,10 +1,10 @@
-var row = 1
-var col = 1
+var row = 0
+var col = 0
 
 $(function() {
   
   fill_squares()
-  set_square(1, 1, 'XX');
+  set_square(row, col, 'XX');
   hide_buttons();
 })
 
@@ -36,6 +36,7 @@ function set_square(tr, tc, td) {
 
 //function to colour in a grid ref
 function colour_square(tr,tc){
+  console.log(tr)
   $('#maze tr:eq(' + tr + ') td:eq(' + tc + ')').css('background','blue')
   
 }
@@ -74,25 +75,45 @@ function hide_buttons(){
 
 //fill in squares to make the maze
 function fill_squares(){
-  
-      colour_square(2,1)
-      colour_square(2,2)
-      colour_square(2,3)
-      colour_square(2,5)
-      colour_square(2,6)
-      colour_square(2,7)
-      
-      colour_square(3,5)
-      colour_square(4,5)
-      
-      colour_square(4,4)
-      colour_square(4,3)
-      colour_square(4,2)
-  
-      //css colour to compare
+  colour_square(0,2)
+colour_square(1,0)
+colour_square(1,2)
+colour_square(1,4)
+colour_square(1,5)
+colour_square(1,7)
+colour_square(1,8)
+colour_square(2,2)
+colour_square(3,1)
+colour_square(4,2)
+colour_square(4,4)
+colour_square(3,6)
+colour_square(3,8)
+colour_square(4,4)
+colour_square(4,5)
+colour_square(4,6)
+colour_square(5,0)
+colour_square(5,2)
+colour_square(5,7)
+colour_square(5,8)
+colour_square(6,2)
+colour_square(6,4)
+colour_square(6,6)
+colour_square(6,7)
+colour_square(6,8)
+colour_square(8,1)
+colour_square(8,4)
+colour_square(8,6)
+colour_square(8,7)
+colour_square(8,8)
+colour_square(8,9)
+colour_square(9,0)
+colour_square(9,2)
+colour_square(9,4)
+
+  //css colour to compare
       colour_button_square()
       //set target squaer
-        $('#maze tr:eq(5) td:eq(5)').css('background','red')
+        $('#maze tr:eq(9) td:eq(9)').css('background','red')
       
     
       
