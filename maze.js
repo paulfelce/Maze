@@ -1,10 +1,10 @@
 var row = 0
 var col = 0
-
+var t=1
 $(function() {
   
   fill_squares()
-  set_square(row, col, 'XX');
+  set_square(row, col, '<img style="width:34px"  src="https://paulfelce.github.io/pairs/pirate.png"></img>');
   hide_buttons();
 })
 
@@ -25,13 +25,13 @@ function move(direction) {
       break;
 
   }
-  set_square(row, col, 'XX');
+  set_square(row, col, '<img style="width:34px"  src="https://paulfelce.github.io/pairs/pirate.png"></img>');
   hide_buttons();
 }
 
 //function to put text in a grid ref
 function set_square(tr, tc, td) {
-  $('#maze tr:eq(' + tr + ') td:eq(' + tc + ')').text(td)
+  $('#maze tr:eq(' + tr + ') td:eq(' + tc + ')').html(td)
  }
 
 //function to colour in a grid ref
@@ -100,7 +100,6 @@ colour_square(6,4)
 colour_square(6,6)
 colour_square(6,7)
 colour_square(6,8)
-  colour_square(7,4)
 colour_square(8,1)
 colour_square(8,4)
 colour_square(8,6)
